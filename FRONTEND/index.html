@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Consumption Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="dashboard-title text-center">Energy Consumption Dashboard</h1>
+
+        <!-- Card -->
+        <div class="card dashboard-card">
+            <div class="card-body">
+                <h5 class="card-title mb-4">Live Readings</h5>
+                <ul class="list-group list-group-flush mb-3">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>Current</span>
+                        <span id="current" class="fw-bold">-- A</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>Power</span>
+                        <span id="power" class="fw-bold">-- W</span>
+                    </li>
+                </ul>
+
+                <!-- Prediction -->
+                <div class="alert alert-info py-2 mb-2" id="prediction">
+                    Predicted Next Power: -- W
+                </div>
+
+                <!-- Timestamp -->
+                <p class="text-muted small mb-0" id="timestamp">Last Updated: --</p>
+            </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="mt-4">
+            <canvas id="myChart" height="200"></canvas>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
